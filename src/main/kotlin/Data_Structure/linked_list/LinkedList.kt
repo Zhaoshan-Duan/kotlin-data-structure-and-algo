@@ -1,4 +1,4 @@
-package linked_list
+package Data_Structure.linked_list
 
 data class ListNode<T : Any>(
     var value: T,
