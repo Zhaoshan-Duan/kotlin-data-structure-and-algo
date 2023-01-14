@@ -1,4 +1,4 @@
-package Data_Structure.linked_list
+package dataStructure.linkedList
 
 
 fun main() {
