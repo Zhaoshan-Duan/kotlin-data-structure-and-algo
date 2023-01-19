@@ -1,12 +1,12 @@
 package dataStructure.stack
 
-class StackImplementation<T: Any> : Stack<T>{
+class Stack_array<T: Any> : Stack<T>{
     private var storage = arrayListOf<T>()
 
     override val count: Int
         get() = storage.size
 
-    override fun peek(): T? {
+    override fun top(): T? {
         return storage.lastOrNull()
     }
 

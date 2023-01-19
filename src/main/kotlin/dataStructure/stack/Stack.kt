@@ -6,7 +6,7 @@ interface Stack<T : Any> {
 
     fun push(element: T)
 
-    fun peek(): T?
+    fun top(): T?
 
     val count: Int
 
