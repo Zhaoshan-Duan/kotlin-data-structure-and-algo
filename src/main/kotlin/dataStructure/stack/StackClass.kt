@@ -1,20 +1,20 @@
 package dataStructure.stack
 
-class Stack_array<T: Any> : Stack<T>{
+class StackClass<T> {
     private var storage = arrayListOf<T>()
 
-    override val count: Int
+    private val count: Int
         get() = storage.size
 
-    override fun top(): T? {
+    private fun top(): T?{
         return storage.lastOrNull()
     }
 
-    override fun pop(): T? {
+    private fun pop(): T?{
         return storage.removeLastOrNull()
     }
 
-    override fun push(element: T) {
+    private fun push(element:T ){
         storage.add(element)
     }
 }
