@@ -1,6 +1,6 @@
 package dataStructure.stack
 
-interface StackInterface<T : Any> {
+interface StackInterface<T> {
     val count: Int
     val isEmpty: Boolean
         get() = count == 0

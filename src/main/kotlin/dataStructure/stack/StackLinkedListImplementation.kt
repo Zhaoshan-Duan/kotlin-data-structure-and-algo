@@ -2,7 +2,7 @@ package dataStructure.stack
 
 import java.util.LinkedList
 
-class StackLinkedList<T : Any>(override val count: Int) : StackInterface<T> {
+class StackLinkedListImplementation<T : Any>(override val count: Int) : StackInterface<T> {
     private val stack = LinkedList<T>()
 
     override fun top(): T? {
@@ -16,6 +16,4 @@ class StackLinkedList<T : Any>(override val count: Int) : StackInterface<T> {
     override fun push(element: T) {
         stack.addFirst(element)
     }
-
-
 }
