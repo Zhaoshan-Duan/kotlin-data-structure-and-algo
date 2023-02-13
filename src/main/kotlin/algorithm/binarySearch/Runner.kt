@@ -48,7 +48,7 @@ fun binarySearchAlternative(nums: IntArray, target: Int): Int {
     if (nums.size == 0) return -1
 
     var (l, r) = Pair(0, nums.lastIndex)
-    while (l < r) {
+    while (l+1 < r) {
         val mid = l + (r - l) / 2
         when {
             target > nums[mid] -> l = mid
