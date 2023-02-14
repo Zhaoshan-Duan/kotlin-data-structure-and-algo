@@ -1,7 +1,6 @@
 package dataStructure.stack
 
 fun main() {
-
     val stack = StackArrayListImplementation<Int>().apply {
         push(1)
         push(2)
@@ -17,8 +16,13 @@ fun main() {
     print(stack)
 
     val list = listOf("A", "B", "C", "D")
-    val stack1 = StackArrayListImplementation.create(list)
-    print(stack1)
-    println("Popped: ${stack1.pop()}")
+    val stackConverted = StackArrayListImplementation.create(list)
+    print(stackConverted)
+    println("Popped: ${stackConverted.pop()}")
+
+    // or create a initializer
+    val stackInitilizer = stackOf(1.0, 2.0, 3.0, 4.0)
+    print(stackInitilizer)
+    println("Popped: ${stackInitilizer.pop()}")
 
 }

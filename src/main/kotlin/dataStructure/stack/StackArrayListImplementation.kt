@@ -25,7 +25,6 @@ class StackArrayListImplementation<T> : StackInterface<T> {
         }
         appendLine("---------")
     }
-
     companion object {
         // take existing list and convert to a stack so the accessing order is guaranteed
         fun <T> create(items: Iterable<T>): StackArrayListImplementation<T> {
@@ -37,7 +36,8 @@ class StackArrayListImplementation<T> : StackInterface<T> {
         }
 
     }
-    fun <T> stackOf(vararg elements: T): StackArrayListImplementation<T>{
-        return StackArrayListImplementation.create(elements.asList())
-    }
+}
+
+fun <T> stackOf(vararg elements: T): StackArrayListImplementation<T>{
+    return StackArrayListImplementation.create(elements.asList())
 }
