@@ -47,6 +47,7 @@ class LinkedList<T : Any> {
 
     fun insert(value: T, afterNode: Node<T>): Node<T> {
 
+        // called on tail node
         if (tail == afterNode) {
             append(value)
             return tail!!
@@ -56,10 +57,58 @@ class LinkedList<T : Any> {
         afterNode.next = newNode
 
         size++
-
         return newNode
     }
 
+    // remove at front
+    fun pop(): T? {
+        if (isEmpty()) return null
+
+        val result = head?.value
+        head = head?.next
+        size--
+
+        if (isEmpty()) tail = null
+
+        return result
+    }
+
+    // remove at end
+    fun removeLast(): T? {
+
+        var head = head ?: return null
+
+        // only one node
+        if (head.next == null) return pop()
+
+        var prev = head
+        var cur = head
+        var next = cur.next
+
+        while (next != null) {
+            prev = cur
+            cur = next
+            next = cur.next
+        }
+
+        prev.next = null
+        tail = prev
+        size--
+
+        return cur.value
+    }
+
+    fun removeAfter(node: Node<T>): T? {
+        if (isEmpty() || node == tail) return null
+
+        val removedValue = node.next?.value
+        if (node.next == tail) tail = node
+
+        node.next = node.next?.next
+
+        size--
+        return removedValue
+    }
 
 
     override fun toString(): String {
