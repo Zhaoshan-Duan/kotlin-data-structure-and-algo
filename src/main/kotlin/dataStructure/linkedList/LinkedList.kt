@@ -10,26 +10,28 @@ class LinkedList<T : Any> {
 
     // add to the front
     // Head First Insertion
-    fun push(value: T): LinkedList<T> = apply {
-        head = Node(value = value, next = head)
+    fun push(value: T): LinkedList<T> {
+        head = Node(value, next = head)
 
         if (tail == null) {
             tail = head
         }
         size++
+
+        return this
     }
 
     // Add to the end of the list
     // Tail End Insertion
+    // fluent interface pattern
     fun append(value: T): LinkedList<T> = apply {
         if (isEmpty()) {
             push(value)
             return this
         }
 
-        val newNode = Node(value = value)
-        tail!!.next = newNode
-        tail = newNode
+        tail!!.next = Node(value)
+        tail = tail!!.next
         size++
     }
 
@@ -112,7 +114,6 @@ class LinkedList<T : Any> {
 
 
     override fun toString(): String {
-
         return if (isEmpty()) {
             "Empty List"
         } else {
