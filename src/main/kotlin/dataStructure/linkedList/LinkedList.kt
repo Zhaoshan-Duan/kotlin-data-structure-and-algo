@@ -36,15 +36,15 @@ class LinkedList<T : Any> {
     }
 
     fun nodeAt(index: Int): Node<T>?{
-        var currNode = head
-        var currIndex = 0
+        var curr = head
+        var i = 0
 
-        while (currNode != null && currIndex < index) {
-            currNode = currNode.next
-            currIndex++
+        while (curr != null && i < index) {
+            curr = curr.next
+            i++
         }
 
-        return currNode
+        return curr
     }
 
     fun insert(value: T, afterNode: Node<T>): Node<T> {
@@ -68,9 +68,10 @@ class LinkedList<T : Any> {
 
         val result = head?.value
         head = head?.next
-        size--
 
         if (isEmpty()) tail = null
+
+        size--
 
         return result
     }
