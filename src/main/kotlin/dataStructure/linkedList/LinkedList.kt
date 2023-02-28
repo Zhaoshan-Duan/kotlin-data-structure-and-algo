@@ -64,14 +64,12 @@ class LinkedList<T : Any> {
 
     // remove at front
     fun pop(): T? {
-        if (isEmpty()) return null
+        if (!isEmpty()) size--
 
         val result = head?.value
         head = head?.next
 
         if (isEmpty()) tail = null
-
-        size--
 
         return result
     }
@@ -79,15 +77,17 @@ class LinkedList<T : Any> {
     // remove at end
     fun removeLast(): T? {
 
-        var head = head ?: return null
+        val head = head ?: return null
 
         // only one node
         if (head.next == null) return pop()
 
+        size--
+
         var prev = head
         var cur = head
-        var next = cur.next
 
+        var next = cur.next
         while (next != null) {
             prev = cur
             cur = next
@@ -96,20 +96,19 @@ class LinkedList<T : Any> {
 
         prev.next = null
         tail = prev
-        size--
 
         return cur.value
     }
 
     fun removeAfter(node: Node<T>): T? {
-        if (isEmpty() || node == tail) return null
 
         val removedValue = node.next?.value
         if (node.next == tail) tail = node
 
+        if (node.next != null) size--
+
         node.next = node.next?.next
 
-        size--
         return removedValue
     }
 
