@@ -1,4 +1,6 @@
 package javademo.collectiondemo.set;
+import javademo.collectiondemo.Student;
+
 import java.util.*;
 public class TreeSetDemo {
     public static void main(String args[]){
@@ -13,5 +15,9 @@ public class TreeSetDemo {
         while(itr.hasNext()){
             System.out.println(itr.next());
         }
+
+
+        TreeSet<Student> t = new TreeSet<>();
+
     }
 }
