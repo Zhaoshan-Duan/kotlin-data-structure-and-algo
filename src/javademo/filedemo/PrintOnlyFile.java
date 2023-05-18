@@ -1,8 +1,6 @@
-package javademo.filedemo;
+package javastuff.filedemo;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class PrintOnlyFile {
     public static void main(String[] args) {

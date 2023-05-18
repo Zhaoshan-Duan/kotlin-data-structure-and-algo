@@ -1,4 +1,4 @@
-package javademo.collectiondemo.map;
+package javastuff.collectiondemo.map;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,5 +23,11 @@ public class HashMapDemo {
         empIds.putIfAbsent("Steve", 222);
         empIds.remove("John");
 
+        test(empIds);
+
+    }
+
+    static void test (Map m) {
+        System.out.println(m);
     }
 }

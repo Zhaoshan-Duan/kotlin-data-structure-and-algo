@@ -1,4 +1,4 @@
-package javademo.generics;
+package javastuff.generics;
 
 public class GenericPrinter<T> {
 

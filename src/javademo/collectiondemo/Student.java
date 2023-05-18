@@ -1,4 +1,4 @@
-package javademo.collectiondemo;
+package javastuff.collectiondemo;
 
 import org.jetbrains.annotations.NotNull;
 

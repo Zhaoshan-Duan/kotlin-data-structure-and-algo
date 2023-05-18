@@ -1,4 +1,4 @@
-package javademo;
+package javademo.OOP;
 
 public class Dog {
 

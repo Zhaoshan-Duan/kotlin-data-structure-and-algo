@@ -1,6 +1,6 @@
-package javademo.generics;
+package javastuff.generics;
 
-import javademo.Animal;
+import javademo.OOP.Animal;
 
 import java.io.Serializable;
 

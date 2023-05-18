@@ -1,4 +1,4 @@
-package javademo.collectiondemo.queue;
+package javastuff.collectiondemo.queue;
 import java.util.*;
 public class ArrayDequeDemo {
 

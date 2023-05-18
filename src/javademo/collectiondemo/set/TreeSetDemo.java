@@ -1,5 +1,5 @@
-package javademo.collectiondemo.set;
-import javademo.collectiondemo.Student;
+package javastuff.collectiondemo.set;
+import javastuff.collectiondemo.Student;
 
 import java.util.*;
 public class TreeSetDemo {

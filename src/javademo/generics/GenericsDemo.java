@@ -1,6 +1,4 @@
-package javademo.generics;
-
-import javademo.Cat;
+package javastuff.generics;
 
 public class GenericsDemo {
     public static void main(String[] args) {
@@ -13,7 +11,7 @@ public class GenericsDemo {
         GenericPrinter<String> StringPrinter = new GenericPrinter<>("Hello");
 
 
-        AnimalPrinter<Cat> printer1 = new AnimalPrinter<Cat>(new Cat());
+//        AnimalPrinter<Cat> printer1 = new AnimalPrinter<Cat>(new Cat());
 
     }
 }

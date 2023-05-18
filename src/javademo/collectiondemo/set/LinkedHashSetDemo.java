@@ -1,4 +1,4 @@
-package javademo.collectiondemo.set;
+package javastuff.collectiondemo.set;
 import java.util.*;
 public class LinkedHashSetDemo {
     public static void main(String args[]) {

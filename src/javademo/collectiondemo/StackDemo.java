@@ -1,4 +1,4 @@
-package javademo.collectiondemo;
+package javastuff.collectiondemo;
 
 import java.util.Iterator;
 import java.util.Stack;

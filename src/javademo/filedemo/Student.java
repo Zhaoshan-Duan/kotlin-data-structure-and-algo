@@ -1,4 +1,4 @@
-package javademo.filedemo;
+package javastuff.filedemo;
 
 public class Student {
     String name;

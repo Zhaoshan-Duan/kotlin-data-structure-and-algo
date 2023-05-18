@@ -1,4 +1,4 @@
-package javademo.wrapperclass;
+package javastuff.wrapperclass;
 
 public class WrapperClassDemo {
     public static void main(String[] args) {
