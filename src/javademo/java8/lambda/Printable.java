@@ -1,4 +1,4 @@
-package javastuff.java8.lambda;
+package javademo.java8.lambda;
 
 public interface Printable{
     void print();

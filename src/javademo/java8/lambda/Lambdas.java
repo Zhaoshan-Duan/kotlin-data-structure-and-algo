@@ -1,4 +1,4 @@
-package javastuff.java8.lambda;
+package javademo.java8.lambda;
 
 public class Lambdas {
     public static void main(String[] args) {
